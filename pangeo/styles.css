@@ -1,0 +1,156 @@
+html {
+  background-color: bisque;
+  background-image: url(https://thumbs.dreamstime.com/b/vintage-antique-historical-world-map-vintage-old-colorful-world-map-america-map-asia-map-africa-map-australia-map-europe-map-south-214907976.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+/*body {
+  background-color: bisque;
+}*/
+
+h1 {
+  margin-left:200px;
+  font-size: 0.5in;
+  font-family:tahoma;
+}
+canvas {
+  background-color: white;
+  width: 100%;
+}
+tools {
+  float: middle;
+  align-items: center;
+}
+.tool {
+  width: 75px;
+  height: 50px;
+  text-align: center;
+  cursor: pointer;
+  margin:10px;
+  transition-duration: 1;
+  border-radius: 8px;
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+}
+
+  .tool01 {border-color: green;}
+  .tool01:hover {background-color: green; color:white;}
+  .tool02 {border-color: red;}
+  .tool02:hover {background-color: red; color:black;}
+  .tool0 {border-color: gray;}
+  .tool0:hover {background-color: gray; color:black;}
+
+  .tool1 {border-color: #00004F;}
+  .tool1:hover{background-color: #00004F; color:white;}
+  .tool2 {border-color: #000088;}
+  .tool2:hover{background-color: #000088; color:white;}
+  .tool3 {border-color: #0000AA;}
+  .tool3:hover {background-color: #0000AA; color:white;}
+  .tool4 {border-color: #0000FF;}
+  .tool4:hover {background-color: #0000FF; color:white;}
+  .tool5 {border-color: #FFFF00;}
+  .tool5:hover {background-color: #FFFF00;}
+  .tool6 {border-color: #004F00;}
+  .tool6:hover{background-color: #004F00; color:white;}
+  .tool7 {border-color: #008800;}
+  .tool7:hover {background-color: #008800;}
+  .tool8 {border-color: #00AA00;}
+  .tool8:hover {background-color: #00AA00;}
+  .tool9 {border-color: #C0C0C0;}
+  .tool9:hover {background-color: #C0C0C0;}
+
+  .toolU {border-color: #ff0000;}
+  .toolU:hover{background-color: #ff0000; color:white;}
+  .toolUR {border-color: #ffa500;}
+  .toolUR:hover{background-color: #ffa500; color:white;}
+  .toolR {border-color: #ffff00;}
+  .toolR:hover {background-color: #ffff00;}
+  .toolDR {border-color: #008000;}
+  .toolDR:hover {background-color: #008000; color:white;}
+  .toolD {border-color: #0000ff;}
+  .toolD:hover {background-color: #0000ff; color: white;}
+  .toolDL {border-color: #00ffff;}
+  .toolDL:hover{background-color: #00ffff; color:white;}
+  .toolL {border-color: #460082;}
+  .toolL:hover {background-color: #460082; color: white;}
+  .toolUL {border-color: #ee82ee;}
+  .toolUL:hover {background-color: #ee82ee;}
+
+  .toolST {border-color: #000000;}
+  .toolST:hover {background-color: #000000; color: white;}
+  .toolST1 {border-color: #000000;}
+  .toolST1:hover {background-color: #000000; color: white;}
+
+  .tool15 {border-color: rgb(255, 64, 137);}
+  .tool15:hover {background-color: rgb(255, 64, 137); color:#0000ff;}
+
+  .it {border-color: #000000;}
+  .it:hover {background-color: #000000; color: white;}
+
+  .toolTipText {
+    background-color: black;
+    color: white;
+
+    cursor: pointer;
+    padding: 10px;
+    transition-duration: 1;
+    border-radius: 8px;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+  }
+  .toolTip0 {visibility: hidden;}
+  .it0:hover .toolTip0 {visibility: visible;}
+
+  .toolTip1 {visibility: hidden;}
+  .it1:hover .toolTip1 {visibility: visible;}
+
+  .toolTip2 {visibility: hidden;}
+  .it2:hover .toolTip2 {visibility: visible;}
+
+  .toolTip3 {visibility: hidden;}
+  .it3:hover .toolTip3 {visibility: visible;}
+
+  .toolTip4 {visibility: hidden;}
+  .it4:hover .toolTip4 {visibility: visible;}
+
+.grid {
+  display: grid;
+  grid-template-columns: 3fr 2fr 2fr;
+  max-width: 1800px;
+  min-width: 1100px;
+  max-height: 1000px;
+  border: 5px none #a52727;
+}
+
+.buttons {
+  padding-left: 10px;
+}
+
+.container {
+  margin-top: 50px;
+  margin-left: 90px;
+  position: relative;
+}
+
+.gif {
+  position: absolute;
+	top: 0;
+	left: 0;
+	display: none;
+}
+
+.container:hover .gif {
+  display: block;
+}
+
+.dropdown {
+  width: 75px;
+  height: 50px;
+  cursor: pointer;
+  margin:10px;
+  transition-duration: 1;
+  border-radius: 8px;
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+}
+.dropdown:hover {
+  background-color: black;
+  color: white;
+}

@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PANGEO</title>
+    <link rel="icon" type="image/x-icon" href="images/World Shark.png">
+    <link rel="stylesheet" href="styles.css" />
+    <script type="text/javascript" src="Tiles.js"></script>
+    <script type="text/javascript" src="draw.js"></script>
+    <script type="text/javascript" src="paint.js"></script>
+    <script type="text/javascript" src="mousepos.js"></script>
+    <script type="text/javascript" src="hover.js"></script>
+    <script type="text/javascript" src="generateHeatMap.js"></script>
+    <script type="text/javascript" src="resizeCanvas.js"></script>
+    <script type="text/javascript" src="collisionfunctions.js"></script>
+    <script type="text/javascript" src="movementArrays.js"></script>
+    <script type="text/javascript" src="sim.js"></script>
+    <script type="text/javascript" src="notBtn.js"></script>
+    <script type="text/javascript" src="export.js"></script>
+    <script type="text/javascript" src="dropdown.js"></script>
+    <script>
+      var intervalId;
+      function start() {
+        intervalId = window.setInterval(function () {
+          simulate();
+        }, 1000);
+      }
+      function stopfr() {
+        clearInterval(intervalId);
+      }
+      function quit() {
+        stop();
+        initilize();
+      }
+    </script>
+  </head>
+  <body onload="initilize()">
+    <!-- Heder for the game -->
+    <h1><b>PANGEO</b></h1>
+    
+    <!-- Displays the game -->
+    <div class="grid">
+      <div>
+        <!-- Displays the game -->
+        <canvas id="myCanvas" style="border: 5px solid #632f12"></canvas>
+      </div>
+      <!-- Buttons to switch the tools -->
+      <div class="buttons">
+        <button class="tool tool01" onclick="start()"><b>Start</b></button>
+        <button class="tool tool02" onclick="stopfr()"><b>Stop</b></button>
+        <button class="tool tool0" onclick="quit()"><b>Reset</b></button>
+        <br />
+        <br />
+
+        <div id="toggle">
+          <button class="tool tool1" onclick="changeTool(-4)">Abyss</button>
+          <button class="tool tool2" onclick="changeTool(-3)">Deep Waters</button>
+          <button class="tool tool3" onclick="changeTool(-2)">Open Oceans</button>
+          <br />
+          <br />
+          <button class="tool tool4" onclick="changeTool(-1)">Shallow</button>
+          <button class="tool tool5" onclick="changeTool(0)">Beach</button>
+          <button class="tool tool6" onclick="changeTool(1)">Low Lands</button>
+          <br />
+          <br />
+          <button class="tool tool7" onclick="changeTool(2)">Plains</button>
+          <button class="tool tool8" onclick="changeTool(3)">Hills</button>
+          <button class="tool tool9" onclick="changeTool(4)">Mountains</button>
+          <br />
+          <br />
+          <button class="tool toolST" onclick="switchTectonic()" style="margin-left: 110px"><b>Switch View</b></button>
+        </div>
+        <div id="altoggle">
+          <button class="tool toolUL" onclick="changeTool(7)">Up left</button>
+          <button class="tool toolU" onclick="changeTool(0)">Up</button>
+          <button class="tool toolUR" onclick="changeTool(1)">Up Right</button>
+          <br />
+          <br />
+          <button class="tool toolL" onclick="changeTool(6)">Left</button>
+          <button class="tool tool15" onclick="sharkUp()"><div id="notBtn name">Nothing.</div></button>
+          <button class="tool toolR" onclick="changeTool(2)">Right</button>
+          <br />
+          <br />
+          <button class="tool toolDL" onclick="changeTool(5)">Down Left</button>
+          <button class="tool toolD" onclick="changeTool(4)">Down</button>
+          <button class="tool toolDR" onclick="changeTool(3)">Down Right</button>
+          <br />
+          <br />
+          <button class="tool toolST1" onclick="switchTectonic2()" style="margin-left: 110px"><b>Switch View</b></button>
+        </div>
+        <div class="container">
+          <img  src="images/Color Compass.png" alt="Color Compass" />
+          <img class="gif" src="images/Color Compass Spinning.gif">
+        </div>
+      </div>
+      <div class="dropDownContainer">
+        <button class="dropdown drop" onclick="showSharks()"><b>Presets:</b></button>
+        <br />
+        <br />
+        <div id="dropdown">
+          <div class="it0">
+            <button class="tool it it0" onclick="importPreset(0);showSharks()">preset 0</button>
+            <br />
+            <span class="toolTip0 toolTipText">Four Quadrants Colliding Island</span>
+            <br />
+            <br />
+          </div>
+          <div class="it1">
+            <button class="tool it it1" onclick="importPreset(1);showSharks()">preset 1</button>
+            <br />
+            <span class="toolTip1 toolTipText">Four Quadrants Splitting Island</span>
+            <br />
+            <br />
+          </div>
+            <div class="it2">
+            <button class="tool it it2" onclick="importPreset(2);showSharks()">preset 2</button>
+            <br />
+            <span class="toolTip2 toolTipText">Vertiacally Stacked Plates Colliding</span>
+            <br />
+            <br />
+          </div>
+          <div class="it3">
+            <button class="tool it it3" onclick="importPreset(3);showSharks()">preset 3</button>
+            <br />
+            <span class="toolTip3 toolTipText">Vertically Stacked Plates Splitting</span>
+            <br />
+            <br />
+          </div>
+          <div class="it4">
+            <button class="tool it it3" onclick="importPreset(4);showSharks()">preset 4</button>
+            <br />
+            <span class="toolTip4 toolTipText">Shark</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script type="text/javascript" src="init.js"></script>
+  </body>
+</html>

@@ -1,0 +1,33 @@
+[['black','black','black','black','black','black','black','black','black','black','black','black','black'],
+['black','grass','bricks','bricks','bricks','bricks','bricks','bricks','bricks','bricks','bricks','grass','black'],
+['black','grass','bricks','bricks','bricks','bricks','door','bricks','bricks','bricks','bricks','grass','black'],
+['black','grass','grass','grass','grass','grass','grass','grass','grass','grass','grass','grass','black'],
+['black','grass','grass','grass','grass','grass','grass','grass','grass','grass','grass','grass','black'],
+['black','grass','bricks','bricks','grass','grass','grass','grass','grass','bricks','bricks','grass','black'],
+['black','grass','bricks','bricks','grass','grass','grass','grass','grass','bricks','bricks','grass','black'],
+['black','grass','grass','grass','grass','grass','grass','grass','grass','grass','grass','grass','black'],
+['black','grass','grass','grass','grass','grass','grass','grass','grass','grass','grass','grass','black'],
+['black','grass','grass','grass','grass','grass','grass','grass','grass','grass','grass','grass','black'],
+['black','grass','bricks','bricks','grass','grass','grass','grass','grass','bricks','bricks','grass','black'],
+['black','grass','bricks','bricks','grass','grass','grass','grass','grass','bricks','bricks','grass','black'],
+['black','grass','grass','grass','grass','grass','grass','grass','grass','grass','grass','grass','black'],
+['black','grass','grass','grass','grass','grass','grass','grass','grass','grass','grass','grass','black'],
+['black','grass','grass','grass','grass','grass','grass','grass','grass','grass','grass','grass','black'],
+['black','grass','bricks','bricks','grass','grass','grass','grass','grass','bricks','bricks','grass','black'],
+['black','grass','bricks','bricks','grass','grass','grass','grass','grass','bricks','bricks','grass','black'],
+['black','black','black','black','black','black','black','black','black','black','black','black','black']]
+
+
+var map1 = [[{tile: 0, data: 0},{tile: 0}],
+			[],
+			[],
+			[],
+			[],
+			[],
+			[],
+			[],
+			[],
+			[],
+			[],
+			[]
+			];
