@@ -4,11 +4,22 @@
     <meta charset="utf-8">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <title>Unity WebGL Player | D20-Roller</title>
-    <link rel="shortcut icon" href="TemplateData/favicon.ico">
+    <link rel="shortcut icon" href="/favicon.ico">
     <link rel="stylesheet" href="TemplateData/style.css">
+    <link rel="stylesheet" href="../style.css">
     <link rel="manifest" href="manifest.webmanifest">
   </head>
   <body>
+    <nav class="black-background nav-container">
+      <div class="mobile-nav black-background firamono">
+          <a href="#" onclick="navButton()" class="mobile-nav-button green">nav&gt;</a>
+      </div>
+      <div class="desktop-nav black-background firamono">
+          <a href="/" class="nav-link green">Home</a>
+          <a href="/gc-downloads" class="nav-link green">Gladecraft Downloads</a>
+          <a href="/unity" class="nav-link green">Roll an Elemental D20!</a>
+      </div>
+    </nav>
     <div id="unity-container">
       <canvas id="unity-canvas" width=960 height=600 tabindex="-1"></canvas>
       <div id="unity-loading-bar">
@@ -99,5 +110,31 @@
       };
       document.body.appendChild(script);
     </script>
+    <script>
+      const desktopNav = document.querySelector('.desktop-nav');
+      const navContainer = document.querySelector('.nav-container');
+      const gameCanvas = document.querySelector('#unity-container');
+      var scrollLocation;
+
+      function navButton() {
+          if (desktopNav.style.display == '') {
+              //save scroll before
+              scrollLocation = window.scrollY;
+              //show links
+              desktopNav.style.display = 'block';
+              navContainer.style.height = '100vh';
+              //hide player
+              gameCanvas.style.display = 'none';
+          } else {
+              //hide links
+              desktopNav.style = null;
+              navContainer.style = null;
+              //show player
+              gameCanvas.style = null;
+              //restore scroll location after
+              window.scrollTo(0, scrollLocation);
+          }
+      }
+  </script>
   </body>
 </html>
