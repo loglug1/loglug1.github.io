@@ -1,0 +1,128 @@
+.nav-container {
+	position: -webkit-sticky;
+	position: sticky;
+	top: 0;
+}
+main {
+	display: grid;
+	grid-template-columns: 50% 50%;
+}
+body {
+	margin: 0;
+}
+.grid-object {
+	padding: 5px;
+}
+h2 {
+	padding-left: 0.2em;
+	font-size: 2em;
+	margin: 0.2em;
+}
+header {
+	background-image: url("background.png");
+	background-repeat: no-repeat;
+	background-position: center;
+	text-align: center;
+	padding: 1em;
+	line-height: 60px;
+	padding-top: 2.2em;
+}
+#name {
+	background-color: rgba(0,0,0,0.3);
+	display: inline;
+	padding: 0.2em;
+	border-radius: 30px;
+	font-family: 'Roboto', sans-serif;
+	color: white;
+}
+#pic {
+	height: 136px;
+	width: auto;
+	border-radius: 100%;
+	border: 2px solid black;
+}
+.green {
+	color: lime;
+}
+.nav-link {
+	padding: 0 0.25em 0 0.25em;
+}
+.roboto {
+	font-family: 'Roboto', sans-serif;
+}
+.firamono {
+	font-family: 'Fira Mono', monospace;
+}
+ul.card {
+	padding: 16px 16px 16px 40px;
+}
+.card {
+	margin-right: 1%;
+	margin-left: 1%;
+	margin-top: 8px;
+	margin-bottom: 8px;
+	border-radius: 30px;
+	padding: 1em;
+}
+img.card {
+	padding: 0;
+	width: 98%;
+	height: auto;
+	display: block;
+}
+.gray-background {
+	background-color: #e4e4e4;
+}
+.black-background {
+	background-color: black;
+}
+.desktop-nav {
+	display: block;
+	position: -webkit-sticky;
+	position: sticky;
+	top: 0;
+	background-color: black;
+	width: 100%
+}
+.mobile-nav {
+	display: none;
+}
+.mobile-nav-button {
+	font-size: 2em;
+}
+@media only screen and (max-width : 640px) {
+	main {
+		grid-template-columns: 100%;
+	}
+	.desktop-nav {
+		display: none;
+		height: 100%;
+	}
+	.mobile-nav {
+		display: block;
+		background-color: black;
+		width: 100%;
+	}
+	.nav-link {
+		padding-top: 0.5em;
+		padding-bottom: 0.5em;
+		font-size: 2em;
+		display: block;
+	}
+}
+@media (prefers-color-scheme: dark) {
+	html {
+		background-color: #121212;
+		color: white;
+	}
+	.gray-background {
+		background-color: #2C2C2C;
+		color: white;
+	}
+	.black-background {
+		background-color: #22222C;
+	}
+	header {
+		background-image: url(dark-background.png);
+	}
+}
