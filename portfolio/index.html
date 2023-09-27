@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Camden McKay's Portfolio</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Mono&family=Roboto+Mono&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="gc1.png" as="image">
+    <link rel="preconnect" href="void.png" as="image">
+    <link rel="preconnect" href="gc2.png" as="image">
+    <link rel="preconnect" href="gc2_5.png" as="image">
+    <link rel="preconnect" href="creative.png" as="image">
+    <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+</head>
+    <body>
+  	    <nav class="black-background nav-container">
+  		    <div class="mobile-nav black-background firamono">
+  			    <a href="#" onclick="navButton()" class="mobile-nav-button green">nav&gt;</a>
+  		    </div>
+  		    <div class="desktop-nav black-background firamono">
+                <a href="/" class="nav-link green">Home</a>
+                <a href="/gc-downloads" class="nav-link green">Gladecraft Downloads</a>
+                <a href="/unity-d20" class="nav-link green">Roll an Elemental D20!</a>
+                <a href="/pangeo" target="_blank" class="nav-link green">Pangeo: Tectonic Plate Simulator</a>
+                <a href="/js-rpg-engine" target="_blank" class="nav-link green">RPG Engine Demo (Incomplete)</a>
+            </div>
+  	    </nav>
+
+  	    <header>
+            <img id="pic" src="https://lh3.googleusercontent.com/a-/AAuE7mCMjbbN7-5zBlRHJRLCsl2B6ErnIZPG4Cip-5pd6t4" alt="Cam McKay"><br>
+            <h1 class="roboto" id="name">Cam McKay's Portfolio</h1>
+        </header>
+
+        <!--
+            Projects to include:
+                RPG Engine?
+                Taxi Drive
+                Archive Minecraft Server Script
+                Hall of Fame
+                Pangeo
+        -->
+
+        <main class="roboto">
+            <div class="grid-object">
+                <h2>Pangeo</h2>
+                <img class="card" alt="Pangeo Screenshot" src="image.png" />
+                <div class="card gray-background">
+                    <h3>About</h3>
+                    <p>
+                    &emsp;Pangeo is a tectonic plate simulator and was my team's submission at the eHacks 2023 hackathon. Pangeo allows you to draw different land shapes on a top down map and set directions for them to move and collide. The project does not accurately represent the movement of tectonic plates, it is only meant as a way to showcase programming skill.
+                    </p>
+                    <h3>Highlighted Skills:</h3>
+                    <ul>
+                        <li>Team Collaboration</li>
+                        <li>Data Structure Design</li>
+                    </ul>
+                </div>
+                <div class="green card black-background firamono">
+                    <h3>Technologies Used:</h3>
+                    <ul>
+                        <li>Javascript</li>
+                        <li>HTML Canvas</li>
+                    </ul>
+                    <h3>More Info</h3>
+                    <ul>
+                        <li><a class="green" href=https://github.com/shark-boys/pangeo>Check it out on Github</a></li>
+                        <li><a class="green" href=https://www.tri-quad.net/pangeo>See the Project Live</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="grid-object">
+                <h2>Hall of Fame</h2>
+                <img class="card" alt="Hall of Fame Screenshot" src="image.png" />
+                <div class="card gray-background">
+                    <h3>About</h3>
+                    <p>
+                    &emsp;This was a project I created for Freeburg Community High School. The app is designed be used to view rewards or honors, such as perfect attendence, state scholars, or state champions, earned by students and teams from the school. Users could navigate through folders of records and also sort them. It also contains a management application for an administrator to add, edit, or remove records. The project is intended to be run on a LAMP stack on the internal network. The management application can then be accessed by any desktop computer and the kiosk app can be accessed on a Chromebook in kiosk mode connected to a interactive display in a hallway.
+                    </p>
+                    <h3>Highlighted Skills:</h3>
+                    <ul>
+                        <li>Web Development</li>
+                        <li>Database Planning and Design</li>
+                        <li>UX/UI Design</li>
+                        <li>Authentication</li>
+                        <li>Submission Handling</li>
+                    </ul>
+                </div>
+                <div class="green card black-background firamono">
+                    <h3>Technologies Used:</h3>
+                    <ul>
+                        <li>PHP</li>
+                        <li>MySqli</li>
+                    </ul>
+                    <h3>More Info</h3>
+                    <ul>
+                        <li><a class="green" href=https://github.com/loglug1/hall-of-fame>Check it out on Github</a></li>
+                    </ul>
+                </div>
+            </div>
+        </main>
+  	    <script>
+		      const desktopNav = document.querySelector('.desktop-nav');
+		      const navContainer = document.querySelector('.nav-container');
+		      var scrollLocation;
+
+		      function navButton() {
+			      if (desktopNav.style.display == '') {
+				      //save scroll before
+				      scrollLocation = window.scrollY;
+				      //show links
+				      desktopNav.style.display = 'block';
+				      navContainer.style.height = '100vh';
+			      } else {
+				      //hide links
+				      desktopNav.style = null;
+				      navContainer.style = null;
+				      //restore scroll location after
+				      window.scrollTo(0, scrollLocation);
+			      }
+		      }
+  	    </script>
+    </body>
+</html>
