@@ -24,7 +24,7 @@
 	</nav>
 
 	<header>
-		<img id="pic" src="https://lh3.googleusercontent.com/a-/AAuE7mCMjbbN7-5zBlRHJRLCsl2B6ErnIZPG4Cip-5pd6t4" alt="Cam McKay"><br>
+		<img id="pic" src="https://lh3.googleusercontent.com/a-/AAuE7mCMjbbN7-5zBlRHJRLCsl2B6ErnIZPG4Cip-5pd6t4" alt="Cam McKay" onclick="picClick()"><br>
 		<h1 class="roboto" id="name">Cam McKay</h1>
 	</header>
 
@@ -73,6 +73,15 @@
 				navContainer.style = null;
                 //restore scroll location after
                 window.scrollTo(0, scrollLocation);
+			}
+		}
+
+		var numClicked = 0;
+
+		function picClick() {
+			numClicked++;
+			if (numClicked >= 3) {
+				window.location.href = "https://www.tri-quad.net/gc-downloads"
 			}
 		}
 	</script>
