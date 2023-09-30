@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>All About Me</title>
+	<title>Camden McKay's Portfolio</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="stylesheet" href="style.css">
 	<link rel="preconnect" href="https://fonts.googleapis.com">
@@ -16,46 +16,45 @@
 		</div>
 		<div class="desktop-nav black-background firamono">
 			<a href="/" class="nav-link green">Home</a>
-			<a href="/gc-downloads" class="nav-link green">Gladecraft Downloads</a>
-			<a href="/unity-d20" class="nav-link green">Roll an Elemental D20!</a>
-			<a href="/pangeo" target="_blank" class="nav-link green">Pangeo: Tectonic Plate Simulator</a>
-			<a href="/js-rpg-engine" target="_blank" class="nav-link green">RPG Engine Demo (Incomplete)</a>
+			<a href="/portfolio" class="nav-link green">Portfolio</a>
 		</div>
 	</nav>
 
 	<header>
 <<<<<<< Updated upstream
-		<img id="pic" src="https://lh3.googleusercontent.com/a-/AAuE7mCMjbbN7-5zBlRHJRLCsl2B6ErnIZPG4Cip-5pd6t4" alt="Cam McKay" onclick="picClick()"><br>
+		<img id="pic" src="pic.jpg" alt="Camden McKay" onclick="picClick()"><br>
 =======
-		<img id="pic" src="pic.jpg" alt="Cam McKay"><br>
 >>>>>>> Stashed changes
-		<h1 class="roboto" id="name">Cam McKay</h1>
+		<h1 class="roboto" id="name">Camden McKay</h1>
 	</header>
 
 	<main>
 		<div class="grid-object roboto">
 			<h2>About Me</h2>
-			<p class="card gray-background">Hello, I am Cam McKay. I've worked in K12 technology for 5 years but am now switching my focus towards harnessing my software development skills. Currently I am a student at SIUE studying Computer Science and plan to graduate in May of 2026.</p>
+			<p class="card gray-background">Hello, I am Camden McKay. I've worked in K12 technology for 5 years but am now switching my focus towards harnessing my software development skills. Currently I am a student at SIUE studying Computer Science and plan to graduate in December of 2025.</p>
 		</div>
 
 		<div class="grid-object roboto">
-			<h2>What is Tri-Quad?</h2>
-			<p class="card gray-background">Tri-Quad.net is my portfolio website where I showcase my latest work. The name comes from a Minecraft server that I used to host from the domain in grade school.</p>
-			
+			<h2>Goals</h2>
+			<p class="card gray-background">
+				I hope to refine my front-end development skills while I complete my degree. I have been learning svelte alongside my classes and am searching for an internship/co-op where I can put my skills to use.
+			</p>
 		</div>
 
 		<div class="grid-object">
 			<div class="green card black-background firamono">
-				<h2>Technical Notes</h2>
+				<h2>Technical Experience</h2>
 				<p>My experience is spread across several different areas. For front end, I am comfortable in HTML and CSS but am also in the process of learning React. For backend, I have built apps with PHP and MySql. When it comes to console applications, I have experience writing in Python, C++, and Java. I also have worked with Unity Engine to build games for the Nintendo 3DS and used Javascript along with HTML canvases to create games for the web. Alongside all of these I also have extensive knowledge in devops—building and deploying Docker images, running various game servers like Minecraft or Terraria, alongside running a web server and proxy.</p>
 			</div>
 		</div>
-
+		
 		<div class="grid-object">
-			<div class="green card black-background firamono">
-				<h2>Future Site Plans</h2>
-				<p>Right now, the site is a 100% hand crafted static site that I am in the process of rewriting to be more dynamic. This will allow me to easily add entries to a dynamically rendered projects page along with simplifying updating certain elements such as the navigation bar.</p>
-			</div>
+			<address class="green card black-background firamono">
+				<h2>Contact Me</h2>
+				Email: <a class="green" href="mailto:cam.mckay9@gmail.com">cam.mckay9@gmail.com</a><br />
+				<br />
+				Cell Phone: <a class="green" href="tel:6186123183">618-612-3183</a>
+			</address>
 		</div>
 	</main>
 
@@ -80,6 +79,7 @@
 			}
 		}
 
+		//hidden link to gc-downloads
 		var numClicked = 0;
 
 		function picClick() {
