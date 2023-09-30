@@ -1,3 +1,6 @@
+address {
+	font-style: normal;
+}
 .nav-container {
 	position: -webkit-sticky;
 	position: sticky;
@@ -6,6 +9,8 @@
 main {
 	display: grid;
 	grid-template-columns: 50% 50%;
+	margin-left: 10vw;
+	margin-right: 10vw;
 }
 body {
 	margin: 0;
@@ -16,6 +21,11 @@ body {
 h2 {
 	padding-left: 0.2em;
 	font-size: 2em;
+	margin: 0.2em;
+}
+h3 {
+	padding-left: 0.2em;
+	font-size: 1.8em;
 	margin: 0.2em;
 }
 header {
@@ -93,6 +103,8 @@ img.card {
 @media only screen and (max-width : 640px) {
 	main {
 		grid-template-columns: 100%;
+		margin-left: 2vw;
+		margin-right: 2vw;
 	}
 	.desktop-nav {
 		display: none;
